@@ -9,7 +9,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 初始化登录状态，搜索的好友名称为自己通讯录中的备注名
 返回结果为list
 '''
-bot = Bot()
+bot = Bot(console_qr=True)
 kele = bot.friends().search('可乐')[0]
 sched = BlockingScheduler()
 
