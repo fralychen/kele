@@ -41,7 +41,7 @@ def cron(event,keep_alive):
     周一至周五早上8：20执行任务
     '''
     sched = BlockingScheduler()
-    sched.add_job(event, 'cron',  day_of_week='1-5', hour=16, minute=23)
+    sched.add_job(event, 'cron',  day_of_week='1-5', hour=8, minute=20)
     sched.add_job(keep_alive, 'interval', hours=1)
     sched.start()
     
